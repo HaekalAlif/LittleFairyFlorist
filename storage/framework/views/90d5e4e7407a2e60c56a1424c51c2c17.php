@@ -15,7 +15,7 @@
         <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
     </head>
     <body>
-        <div id="app"></div>
+        <div id="homeview"></div>
     </body>
 </html>
 <?php /**PATH C:\laragon\www\Project Coding\Laravel+Vue\littlefairyflorist\resources\views/app.blade.php ENDPATH**/ ?>
