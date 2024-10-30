@@ -9,8 +9,8 @@ Alpine.start();
 
 import { createApp } from "vue";
 
-import app from "./components/app.vue";
+import landing from "../js/views/HomeView.vue";
 
 import router from "./router";
 
-createApp(app).use(router).mount("#app");
+createApp(landing).use(router).mount("#homeview");

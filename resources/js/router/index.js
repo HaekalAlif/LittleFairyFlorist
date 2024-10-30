@@ -1,26 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import home from '../components/HomePage.vue';
-import about from '../components/AboutPage.vue';
-import notFound from '../components/NotFoundPage.vue';
-import Form from '../components/Form.vue';
+import Home from '../views/HomeView.vue';
+import Order from '../views/Form.vue';
+import NotFoundPage from "../components/NotFoundPage.vue";
 
 const routes = [
     {
         path: '/',
-        component: home,
+        name: 'Home',
+        component: Home
     },
     {
-        path: '/about',
-        component: about
-    },
-    {
-        path: '/form',
-        component: Form
+        path: '/order',
+        name: 'Order',
+        component: Order
     },
     {
         path: '/:pathMatch(.*)*',
-        component: notFound
+        name: 'NotFound',
+        component: NotFoundPage
     },
 ]
 
@@ -29,4 +27,4 @@ const router = createRouter({
     routes,
 })
 
-export default router
+export default router;
