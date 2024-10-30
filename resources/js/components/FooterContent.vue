@@ -8,10 +8,10 @@
           <p class="self-stretch mt-7 text-base font-medium tracking-tight leading-6 text-red-400">
             Our vision is to provide convenience and help increase your sales business.
           </p>
-          <div class="flex gap-5 mt-8">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec2e2084a956b4777db275f825058585f5fdeba17b4a1f0cb00fda2eababe8c2?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7" alt="" class="object-contain shrink-0 aspect-square w-[34px]" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/794a0bb1d6d86b0a4f08acc78c6430d67d51bfb1b540dd4e3cab54be91169d6c?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7" alt="" class="object-contain shrink-0 aspect-[0.97] w-[33px]" />
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e2552a2750febb2441dd3d88f0acd96569bc567f715447eeb135147c060419d?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7" alt="" class="object-contain shrink-0 aspect-square w-[34px]" />
+          <div class="flex gap-3 mt-10">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec2e2084a956b4777db275f825058585f5fdeba17b4a1f0cb00fda2eababe8c2?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7" alt="" class=" aspect-square w-[68px]" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/794a0bb1d6d86b0a4f08acc78c6430d67d51bfb1b540dd4e3cab54be91169d6c?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7" alt="" class=" aspect-[1.15] w-[66px]" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e2552a2750febb2441dd3d88f0acd96569bc567f715447eeb135147c060419d?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7" alt="" class=" aspect-square w-[68px]" />
           </div>
         </div>
         <nav class="flex flex-col text-red-400">
@@ -49,11 +49,11 @@
         </nav>
       </div>
       <hr class="shrink-0 mt-14 h-px border border-solid border-slate-600 border-opacity-20 max-md:mt-10 max-md:max-w-full" />
-      <div class="flex flex-wrap gap-10 items-start mt-6 w-full text-base font-semibold tracking-tight max-md:max-w-full">
+      <div class="flex flex-wrap gap-10 items-center justify-between mt-6 w-full text-base font-semibold tracking-tight max-md:max-w-full">
         <p class="text-red-400 bg-blend-normal">
           ©2024 Panca Angkasa. All rights reserved
         </p>
-        <div class="flex flex-1 gap-10 mt-3 text-right text-red-400">
+        <div class="flex gap-10 text-right text-red-400">
           <a href="#" class="bg-blend-normal basis-auto hover:underline">Privacy & Policy</a>
           <a href="#" class="bg-blend-normal basis-auto hover:underline">Terms & Condition</a>
         </div>

@@ -3,7 +3,8 @@
       <h1 data-layername="logo" class="text-2xl tracking-tighter text-red-400">
         Little Fairy Florist
       </h1>
-      <nav class="flex gap-10 self-start text-base tracking-tight text-stone-600">
+      <div class="flex flex-1"></div>
+      <nav class="flex gap-10 self-start text-base tracking-tight text-stone-600 justify-end">
         <router-link to="/">Home</router-link>
         <router-link to="/product">Product</router-link>
         <router-link to="/order">Order</router-link>
@@ -11,3 +12,4 @@
       </nav>
     </header>
   </template>
+
