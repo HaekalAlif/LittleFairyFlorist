@@ -23,7 +23,10 @@ class OrderController extends Controller
         ]);
 
         // Simpan gambar jika ada
-        $imagePath = $request->hasFile('image_reference') ? $request->file('image_reference')->store('images', 'public') : null;
+        $imagePath = $request->hasFile('image_reference') 
+            ? $request->file('image_reference')->store('images/orders', 'public') 
+            : null;
+
 
         // Buat order baru
         $order = Order::create([
@@ -50,14 +53,35 @@ class OrderController extends Controller
                    "Tanggal: {$order->delivery_date}\n" .
                    "Catatan: {$order->additional_notes}";
 
-        // Debugging pesan untuk memastikan semuanya terisi
-        \Log::info('WhatsApp Message: ' . $message);
-
         // Encode pesan untuk URL
         $message = urlencode($message);
         $whatsappUrl = "https://api.whatsapp.com/send?phone={$whatsappNumber}&text={$message}";
 
-        // Redirect ke WhatsApp
+        // Kembalikan JSON dengan URL WhatsApp
         return response()->json(['success' => true, 'whatsapp_url' => $whatsappUrl]);
+    }
+
+    public function index()
+{
+    $orders = Order::all();
+    return response()->json($orders);
+}
+
+
+    public function update(Request $request, $id)
+    {
+        $order = Order::findOrFail($id);
+        $order->status = $request->input('status');
+        $order->save();
+
+        return response()->json(['message' => 'Order status updated successfully.']);
+    }
+
+    public function destroy($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->delete();
+
+        return response()->json(['message' => 'Order deleted successfully.']);
     }
 }

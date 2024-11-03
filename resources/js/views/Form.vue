@@ -1,13 +1,18 @@
 <script setup lang>
-import MainLayout from '@/layouts/MainLayout.vue'
+import MainLayout from "@/layouts/MainLayout.vue";
 </script>
-
 
 <template>
     <MainLayout>
-        <div class="bg-pink-200 flex justify-center items-center min-h-screen py-8">
-            <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                <h1 class="text-2xl font-bold mb-6 text-center">Form Pemesanan</h1>
+        <div
+            class="bg-red-200 flex justify-center items-center min-h-screen py-8"
+        >
+            <div
+                class="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md"
+            >
+                <h1 class="text-2xl font-bold mb-6 text-center">
+                    Form Pemesanan
+                </h1>
                 <form @submit.prevent="submitForm">
                     <div class="mb-4">
                         <label class="block text-gray-700">Nama Pembeli</label>
@@ -20,7 +25,9 @@ import MainLayout from '@/layouts/MainLayout.vue'
                         />
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700">Nomor Whatsapp</label>
+                        <label class="block text-gray-700"
+                            >Nomor Whatsapp</label
+                        >
                         <input
                             type="text"
                             v-model="nomorWhatsapp"
@@ -40,7 +47,9 @@ import MainLayout from '@/layouts/MainLayout.vue'
                         />
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700">Gambar Referensi</label>
+                        <label class="block text-gray-700"
+                            >Gambar Referensi</label
+                        >
                         <input
                             type="file"
                             @change="handleFileUpload"
@@ -58,7 +67,9 @@ import MainLayout from '@/layouts/MainLayout.vue'
                         />
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700">Catatan Tambahan</label>
+                        <label class="block text-gray-700"
+                            >Catatan Tambahan</label
+                        >
                         <textarea
                             v-model="catatanTambahan"
                             class="w-full px-3 py-2 border rounded-lg"
@@ -99,7 +110,7 @@ import MainLayout from '@/layouts/MainLayout.vue'
                     </div>
                     <button
                         type="submit"
-                        class="w-full bg-purple-500 text-white py-2 rounded-lg"
+                        class="w-full bg-red-300 text-white py-2 rounded-lg"
                     >
                         Submit
                     </button>
@@ -151,7 +162,12 @@ export default {
                 .then((data) => {
                     if (data.success) {
                         alert("Pesanan berhasil disimpan!"); // Pop-up sukses
-                        window.open(data.whatsapp_url, "_blank"); // Buka WhatsApp dengan URL
+
+                        // Tunda pengalihan ke WhatsApp selama 2 detik
+                        setTimeout(() => {
+                            window.open(data.whatsapp_url, "_blank"); // Buka WhatsApp dengan URL
+                        }, 2000); // Waktu tunggu 2000 ms (2 detik)
+
                         this.resetForm(); // Reset form setelah sukses
                     } else {
                         alert("Gagal menyimpan pesanan."); // Pop-up gagal

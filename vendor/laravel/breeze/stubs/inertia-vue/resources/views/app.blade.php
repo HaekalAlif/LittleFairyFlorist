@@ -15,12 +15,7 @@
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-<<<<<<< HEAD:vendor/laravel/breeze/stubs/inertia-vue/resources/views/app.blade.php
     <body class="font-sans antialiased">
         @inertia
-=======
-    <body>
-        <div id="homeview"></div>
->>>>>>> 351e44921c3781349bf59b89fe14ac55f288a852:resources/views/app.blade.php
     </body>
 </html>

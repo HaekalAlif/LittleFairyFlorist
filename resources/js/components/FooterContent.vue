@@ -1,5 +1,5 @@
 <template>
-    <footer class="flex overflow-hidden flex-col px-16 py-20 bg-red-200 max-md:px-5">
+    <footer class="flex overflow-hidden flex-col px-16 py-10 bg-red-200 max-md:px-5">
       <div class="flex flex-wrap gap-5 justify-between w-full max-w-[1247px] max-md:max-w-full">
         <div class="flex flex-col items-start my-auto">
           <h2 class="text-3xl font-semibold tracking-tighter text-red-400">
