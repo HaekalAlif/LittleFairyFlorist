@@ -1,5 +1,6 @@
 <script setup lang>
 import MainLayout from "@/layouts/MainLayout.vue";
+import TestimonialSection from "../components/testimonial/TestimonialSection.vue";
 </script>
 
 <template>
@@ -268,8 +269,7 @@ import MainLayout from "@/layouts/MainLayout.vue";
                         terbaik kami untuk setiap kesempatan spesial.
                     </p>
                     <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b805a2be92d4461a6793e250daae87708e8f4adf40520c298d8b20accf12184d?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                        src="/public/assets/images/pemisah.png"
                         alt="Showcase of flower arrangements"
                         class="object-contain mt-16 w-full max-md:mt-10 max-md:max-w-full"
                     />
@@ -287,17 +287,15 @@ import MainLayout from "@/layouts/MainLayout.vue";
                                         >
                                             <h2>Blooming Romance</h2>
                                             <img
-                                                loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff41e72210f4fee020eabee8d60f4c1acca44a5e07b16077f21b615026060bbe?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                                src="/public/assets/images/heart.png"
                                                 alt=""
                                                 class="object-contain shrink-0 w-6 aspect-square"
                                             />
                                         </div>
                                         <img
-                                            loading="lazy"
-                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/b55edb1144b24eb2c96d760adbe35c8fa0d5fe1296086e7f9843a98ed4c25c17?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                            src="/public/assets/images/buket1.png"
                                             alt="Blooming Romance flower arrangement"
-                                            class="object-contain mt-8 w-full rounded-none aspect-[1.13] max-md:mx-1"
+                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1"
                                         />
                                         <button
                                             class="gap-2 self-end px-5 mt-5 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
@@ -320,7 +318,7 @@ import MainLayout from "@/layouts/MainLayout.vue";
                                             <h2>Sweet Serenity</h2>
                                             <img
                                                 loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e009c636bb57756a74f9cc18027711796e4e6a2fd0f6b03b40f6adcd5c8abe7?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                                src="/public/assets/images/heart.png"
                                                 alt=""
                                                 class="object-contain shrink-0 w-6 aspect-square"
                                             />
@@ -330,9 +328,8 @@ import MainLayout from "@/layouts/MainLayout.vue";
                                         >
                                             <img
                                                 loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/67c6aa64364cab1d05576ad1c99d4a689b103c2a2ffa6bad50ffb634b250b06b?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
-                                                alt="Sweet Serenity flower arrangement"
-                                                class="object-contain z-10 -mt-2.5 w-full rounded-none aspect-[1.13]"
+                                                src="/public/assets/images/buket2.png"
+                                                class="object-contain z-10 -mt-2.3 w-full rounded-3xl aspect-[1.13]"
                                             />
                                         </div>
                                         <button
@@ -356,16 +353,16 @@ import MainLayout from "@/layouts/MainLayout.vue";
                                             <h2>Joyful Blossoms</h2>
                                             <img
                                                 loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e009c636bb57756a74f9cc18027711796e4e6a2fd0f6b03b40f6adcd5c8abe7?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                                src="/public/assets/images/heart.png"
                                                 alt=""
                                                 class="object-contain shrink-0 w-6 aspect-square"
                                             />
                                         </div>
                                         <img
                                             loading="lazy"
-                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba32df55465d7709e0be7ccfa59f3afcf18a07b0d34bacf69e1e91283121da63?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                            src="/public/assets/images/buket3.png"
                                             alt="Joyful Blossoms flower arrangement"
-                                            class="object-contain self-start mt-6 w-full rounded-none aspect-[1.13]"
+                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1"
                                         />
                                         <button
                                             class="gap-2 self-end px-5 mt-7 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
@@ -388,16 +385,16 @@ import MainLayout from "@/layouts/MainLayout.vue";
                                             <h2>Classic Elegance</h2>
                                             <img
                                                 loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1127e7f5c75ae6442bbe0ffc6e07811b3afca3ff5db08e12337f83860d90984?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                                src="/public/assets/images/heart.png"
                                                 alt=""
                                                 class="object-contain shrink-0 w-6 aspect-square"
                                             />
                                         </div>
                                         <img
                                             loading="lazy"
-                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6f0fc46d0c93fcd54b10a2cf60ead1484a21c8d8b37b06273fb453a0f6536f8?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                            src="/public/assets/images/buket4.png"
                                             alt="Classic Elegance flower arrangement"
-                                            class="object-contain mt-5 w-full rounded-none aspect-[1.13] max-md:mr-2 max-md:ml-1"
+                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1"
                                         />
                                         <button
                                             class="gap-2 self-end px-5 mt-8 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
@@ -473,7 +470,7 @@ import MainLayout from "@/layouts/MainLayout.vue";
                                         >
                                             <img
                                                 loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/80b685a5eb64935662398061fba2a297faeae3eb4b1462f5bbfb5a2c9e147bb5?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
+                                                src="/public/assets/images/owner.png"
                                                 alt="Little Fairy Florist showcase"
                                                 class="object-contain w-full rounded-3xl aspect-[0.95] max-md:max-w-full"
                                             />
@@ -616,16 +613,54 @@ import MainLayout from "@/layouts/MainLayout.vue";
                     </nav>
                 </div>
 
-                <section class="flex flex-col rounded-none">
+                <section class="flex flex-col rounded-none w-full">
                     <div
-                        class="flex flex-col justify-center px-14 py-16 w-full bg-red-200 max-md:px-5 max-md:max-w-full"
+                        class="px-14 py-16 w-full bg-red-200 max-md:px-5 max-md:max-w-full"
                     >
-                        <img
-                            loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/55429668fa6eb625ca067f1edc1464582740a7e4ab6eec4b7d6fde9f0cc5977a?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
-                            alt="Decorative image"
-                            class="object-contain w-full rounded-xl aspect-[3.69] max-md:max-w-full"
-                        />
+                        <div class="flex gap-5 max-md:flex-col">
+                            <article
+                                class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full"
+                            >
+                                <figure
+                                    class="flex overflow-hidden flex-col grow justify-end px-px w-full bg-white rounded-3xl max-md:mt-10"
+                                >
+                                    <img
+                                        loading="lazy"
+                                        src="/public/assets/images/buket5.png"
+                                        alt="Advertisement 1"
+                                        class="object-contain w-full aspect-[1.12]"
+                                    />
+                                </figure>
+                            </article>
+                            <article
+                                class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full"
+                            >
+                                <figure
+                                    class="flex overflow-hidden flex-col grow w-full bg-white rounded-3xl max-md:mt-10"
+                                >
+                                    <img
+                                        loading="lazy"
+                                        src="/public/assets/images/buket7.png"
+                                        alt="Advertisement 2"
+                                        class="object-contain w-full aspect-[1.12]"
+                                    />
+                                </figure>
+                            </article>
+                            <article
+                                class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full"
+                            >
+                                <figure
+                                    class="flex overflow-hidden flex-col grow justify-center w-full bg-white rounded-3xl max-md:mt-10"
+                                >
+                                    <img
+                                        loading="lazy"
+                                        src="/public/assets/images/buket6.png"
+                                        alt="Advertisement 3"
+                                        class="object-contain w-full aspect-[1.12]"
+                                    />
+                                </figure>
+                            </article>
+                        </div>
                     </div>
                 </section>
 
@@ -677,175 +712,9 @@ import MainLayout from "@/layouts/MainLayout.vue";
                             bunga dari Little Fairy Florist.
                         </p>
                         <div
-                            class="flex flex-col self-stretch px-14 mt-14 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full"
+                            class="flex flex-col self-stretch px-14  w-full max-md:px-5 max-md:mt-10 max-md:max-w-full"
                         >
-                            <div
-                                class="grid grid-cols-3 gap-5 max-md:grid-cols-1 max-md:ml-0 max-md:w-full"
-                            >
-                                <article>
-                                    <div
-                                        class="flex flex-col px-11 py-7 mx-auto w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-10"
-                                    >
-                                        <div
-                                            class="flex gap-5 items-start self-start ml-3 text-center max-md:ml-2.5"
-                                        >
-                                            <img
-                                                class="flex shrink-0 w-10 h-10 bg-white rounded-full"
-                                                src="/public/assets/images/profile/profil-1.png"
-                                                alt=""
-                                            />
-                                            <div class="flex flex-col mt-2.5">
-                                                <h3
-                                                    class="self-start text-lg font-medium leading-loose"
-                                                >
-                                                    FufuFafa
-                                                </h3>
-                                                <p
-                                                    class="mt-2.5 text-sm leading-loose"
-                                                >
-                                                    Surakarta, Jawa Tengah
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <p class="mt-5 text-base leading-6">
-                                            "Pesanannya sangat cantik dan
-                                            elegan! Little Fairy Florist
-                                            benar-benar membuat momen ulang
-                                            tahun saya semakin spesial. Bunga
-                                            segar dan rangkaiannya unik. Pasti
-                                            akan pesan lagi!"
-                                        </p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <div
-                                        class="flex flex-col px-8 py-7 mx-auto w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-10"
-                                    >
-                                        <div
-                                            class="flex gap-5 items-start self-start ml-3 text-center max-md:ml-2.5"
-                                        >
-                                            <img
-                                                class="flex shrink-0 w-10 h-10 bg-white rounded-full"
-                                                src="/public/assets/images/profile/profil-2.png"
-                                                alt=""
-                                            />
-                                            <div class="flex flex-col mt-2">
-                                                <h3
-                                                    class="self-start text-lg font-medium leading-loose"
-                                                >
-                                                    Faiz Ahnaf
-                                                </h3>
-                                                <p
-                                                    class="mt-2 text-sm leading-loose"
-                                                >
-                                                    Sragen, Jawa Tengah
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <p class="mt-7 text-base leading-8">
-                                            "Dari awal pemesanan hingga
-                                            pengiriman, pelayanannya sangat
-                                            memuaskan. Buket bunga untuk
-                                            perayaan anniversary kami luar
-                                            biasa. Terima kasih Little Fairy
-                                            Florist!"
-                                        </p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <div
-                                        class="flex flex-col px-8 py-7 mx-auto w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-10"
-                                    >
-                                        <div
-                                            class="flex gap-5 items-start self-start ml-3 text-center max-md:ml-2.5"
-                                        >
-                                            <img
-                                                class="flex shrink-0 w-10 h-10 bg-white rounded-full"
-                                                src="/public/assets/images/profile/profil-3.png"
-                                                alt=""
-                                            />
-                                            <div class="flex flex-col mt-2">
-                                                <h3
-                                                    class="self-start text-lg font-medium leading-loose"
-                                                >
-                                                    Izzati Putri
-                                                </h3>
-                                                <p
-                                                    class="mt-2 text-sm leading-loose"
-                                                >
-                                                    Magelang, Jawa tengah
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <p class="mt-7 text-base leading-8">
-                                            "Saya sangat terkesan dengan
-                                            kualitas bunga dan rangkaiannya.
-                                            Setiap detail terasa diperhatikan
-                                            dengan baik. Little Fairy Florist
-                                            selalu menjadi pilihan utama saya!"
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div
-                                class="flex flex-wrap gap-5 justify-between mt-20 ml-3 w-full max-w-[1192px] max-md:mt-10 max-md:max-w-full"
-                            >
-                                <div class="flex gap-4 my-auto">
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/50193aaa2dffb3ca3e1551b0693f90390abf7b1388e6a0badba82315767cc1f2?placeholderIfAbsent=true&apiKey=e8011a4084744e0fbb615d9ad0bac9f7"
-                                        class="object-contain shrink-0 aspect-[3] w-[45px]"
-                                        alt="Decorative element"
-                                    />
-                                    <span
-                                        class="flex shrink-0 rounded-full bg-stone-400 bg-opacity-50 h-[15px] w-[15px]"
-                                    ></span>
-                                    <span
-                                        class="flex shrink-0 rounded-full bg-stone-400 bg-opacity-50 h-[15px] w-[15px]"
-                                    ></span>
-                                    <span
-                                        class="flex shrink-0 rounded-full bg-stone-400 bg-opacity-50 h-[15px] w-[15px]"
-                                    ></span>
-                                </div>
-
-                                <div class="flex gap-2 my-auto">
-                                    <button
-                                        class="flex items-center justify-center shrink-0 w-8 h-8 bg-rose-50 rounded-full"
-                                        aria-label="Previous testimonial"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                                clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </button>
-                                    <button
-                                        class="flex items-center justify-center shrink-0 w-8 h-8 bg-rose-50 rounded-full"
-                                        aria-label="Next testimonial"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                            <TestimonialSection />
                         </div>
                     </div>
                 </section>

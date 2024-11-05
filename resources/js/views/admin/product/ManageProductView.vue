@@ -113,11 +113,11 @@ onMounted(() => {
                                 <img
                                     :src="`/${product.image_url}`"
                                     alt="Product Image"
-                                    class="max-w-full h-auto"
+                                    class="max-w-[200px]"
                                 />
                             </td>
                             <td
-                                class="px-4 py-2 flex items-center justify-between"
+                                class="px-4 py-20 flex items-center justify-between"
                             >
                                 <button
                                     @click="confirmDelete(product.id)"

@@ -10,7 +10,10 @@ class TestimonialController extends Controller
 {
     public function index()
     {
-        return Testimonial::all();
+        // Mengambil semua data testimonial dari database
+        $testimonials = Testimonial::all();
+
+        return response()->json($testimonials);
     }
 
     public function store(Request $request)

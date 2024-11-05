@@ -71,12 +71,10 @@ import { ref } from "vue";
                                 <img
                                     :src="`/storage/${order.image_reference}`"
                                     alt="Order Image"
-                                    class="max-w-full h-auto"
+                                    class="max-w-[200px] h-auto"
                                 />
                             </td>
-                            <td
-                                class="px-4 py-20 flex items-center justify-between"
-                            >
+                            <td class="px-4 py-20 flex items-center justify-center">
                                 <button
                                     @click="confirmDelete(order.id)"
                                     class="bg-red-500 hover:bg-red-900 text-white px-3 py-1 rounded transition"

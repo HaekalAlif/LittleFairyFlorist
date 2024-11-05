@@ -116,11 +116,11 @@ onMounted(() => {
                                 <img
                                     :src="`/storage/${testimonial.image_url}`"
                                     alt="Testimonial Image"
-                                    class="max-w-full h-auto"
+                                    class="max-w-[200px]"
                                 />
                             </td>
                             <td
-                                class="px-4 py-2 flex items-center justify-between"
+                                class="px-4 py-20 flex items-center justify-between"
                             >
                                 <button
                                     @click="confirmDelete(testimonial.id)"

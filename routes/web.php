@@ -51,4 +51,11 @@ Route::get('/{pathMatch}', function () {
     return view('app');
 })->where('pathMatch', ".*");
 
+// route untuk order user
 Route::post('/orders', [OrderController::class, 'store']);
+
+// route untuk menampilkan product
+Route::get('/products', [ProductController::class, 'index']);
+
+// Route untuk mengambil data testimonial
+Route::get('/testimonials', [TestimonialController::class, 'index']);
