@@ -7,29 +7,19 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
     <MainLayout>
         <div class="flex flex-col">
             <header class="flex flex-col w-full max-md:max-w-full">
-                <div
-                    class="flex flex-col w-full rounded-none max-md:max-w-full"
-                >
+                <div class="flex flex-col w-full rounded-none max-md:max-w-full">
                     <div class="flex flex-col bg-red-200 max-md:max-w-full">
-                        <main
-                            class="flex flex-col text-base text-red-400 rounded-none"
-                        >
+                        <main class="flex flex-col text-base text-red-400 rounded-none">
                             <section
-                                class="flex relative flex-col items-start px-14 pt-60 w-full min-h-[816px] max-md:px-5 max-md:py-24 max-md:max-w-full"
-                            >
-                                <img
-                                    src="/public/assets/images/bg-landing.png"
-                                    alt=""
-                                    class="object-cover absolute inset-0 w-full h-[960px] -mt-36"
-                                />
+                                class="flex relative flex-col items-start px-14 pt-60 w-full min-h-[816px] max-md:px-5 max-md:py-24 max-md:max-w-full">
+                                <img src="/public/assets/images/bg-landing.png" alt=""
+                                    class="object-cover absolute inset-0 w-full h-[960px] -mt-36" />
                                 <h1
-                                    class="relative gap-2.5 self-stretch p-2.5 text-5xl font-bold leading-none uppercase w-[575px] max-md:max-w-full max-md:text-4xl"
-                                >
+                                    class="relative gap-2.5 self-stretch p-2.5 text-5xl font-bold leading-none uppercase w-[575px] max-md:max-w-full max-md:text-4xl my-10">
                                     little fairy florist
                                 </h1>
                                 <p
-                                    class="relative mt-4 ml-3 font-medium tracking-tight leading-7 w-[548px] max-md:max-w-full"
-                                >
+                                    class="relative ml-3 font-medium tracking-tight leading-7 w-[548px] max-md:max-w-full">
                                     Bawa keindahan yang bermakna dalam hidup
                                     Anda dengan rangkaian bunga dari Little
                                     Fairy Florist. Setiap buket kami susun
@@ -42,8 +32,7 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                                 </p>
                                 <a href="/order">
                                     <button
-                                        class="relative gap-2 self-stretch px-5 mt-9 mb-0 ml-3 font-semibold tracking-tight text-center text-orange-100 bg-red-400 rounded min-h-[44px] w-[150px] max-md:mb-2.5 max-md:ml-2.5 outline-none"
-                                    >
+                                        class="relative gap-2 self-stretch px-5 mt-9 mb-0 ml-3 font-semibold tracking-tight text-center text-orange-100 bg-red-400 rounded min-h-[44px] w-[150px] max-md:mb-2.5 max-md:ml-2.5 outline-none">
                                         Pesan Sekarang
                                     </button>
                                 </a>
@@ -51,36 +40,34 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                         </main>
 
                         <nav
-                            class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 max-md:mt-10 items-center justify-center"
-                        >
+                            class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 items-center justify-center">
+                            <!-- Elemen pertama -->
+                            <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
                             <div class="grow shrink w-56 text-rose-100">
-                                little fairy florist
+                                Little Fairy Florist
                             </div>
-                            <div
-                                class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                            ></div>
-                            <div class="grow shrink w-56">
-                                little fairy florist
+                            <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
+
+                            <!-- Elemen kedua -->
+                            <div class="grow shrink w-56 hidden md:block">
+                                Little Fairy Florist
                             </div>
-                            <div
-                                class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                            ></div>
-                            <div class="grow shrink w-56">
-                                little fairy florist
+                            <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden md:block"></div>
+
+                            <!-- Elemen ketiga -->
+                            <div class="grow shrink w-56 hidden lg:block">
+                                Little Fairy Florist
                             </div>
-                            <div
-                                class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                            ></div>
-                            <div class="grow shrink w-56">
-                                little fairy florist
+                            <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden lg:block"></div>
+
+                            <!-- Elemen keempat -->
+                            <div class="grow shrink w-56 hidden xl:block">
+                                Little Fairy Florist
                             </div>
-                            <div
-                                class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                            ></div>
-                            <div class="grow shrink w-[228px]">
-                                little fairy florist
-                            </div>
+                            <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden xl:block"></div>
                         </nav>
+
+
                     </div>
                 </div>
             </header>
@@ -88,128 +75,78 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
 
         <section class="flex flex-col rounded-none">
             <div
-                class="flex flex-col px-16 pt-16 pb-16 w-full bg-orange-100 max-md:px-5 max-md:pb-24 max-md:max-w-full"
-            >
+                class="flex flex-col px-16 pt-16 pb-16 w-full bg-orange-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
                 <h1
-                    class="self-center text-5xl font-bold tracking-tighter text-red-400 max-md:max-w-full max-md:text-4xl"
-                >
+                    class="self-center text-5xl font-bold tracking-tighter text-red-400 max-md:max-w-full max-md:text-4xl">
                     Langkah-Langkah Pemesanan
                 </h1>
-                <div
-                    class="mt-20 mb-0 max-md:mt-10 max-md:mb-2.5 max-md:max-w-full"
-                >
-                    <div class="flex gap-5 max-md:flex-col">
-                        <article
-                            class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full"
-                        >
+                <div class="mt-20 mb-0 max-md:mt-10 max-md:mb-2.5 max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col max-md:gap-8">
+                        <article class="flex flex-col w-3/12 max-md:w-full">
                             <div
-                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8"
-                            >
+                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8">
                                 <div
-                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]"
-                                >
-                                    <img
-                                        src="/public/assets/icon/step-order-1.png"
-                                        alt=""
-                                        class="h-[80px] w-[80px] object-contain"
-                                    />
+                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]">
+                                    <img src="/public/assets/icon/step-order-1.png" alt=""
+                                        class="h-[80px] w-[80px] object-contain" />
                                 </div>
-
-                                <h2
-                                    class="mt-12 text-2xl font-semibold tracking-tight max-md:mt-10"
-                                >
+                                <h2 class="mt-12 text-2xl font-semibold tracking-tight max-md:mt-10 text-center">
                                     Memilih Bunga
                                 </h2>
-                                <p
-                                    class="self-stretch mt-6 text-sm tracking-tight leading-6"
-                                >
-                                    Memilih memilih berbagai jenis Bucket yang
-                                    tersedia, sesuai kebutuhan atau preferensi
+                                <p class="self-stretch mt-6 text-sm tracking-tight leading-6 text-center">
+                                    Memilih berbagai jenis Bucket yang tersedia, sesuai kebutuhan atau preferensi
                                 </p>
                             </div>
                         </article>
-                        <article
-                            class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full"
-                        >
+
+                        <article class="flex flex-col w-3/12 max-md:w-full">
                             <div
-                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8"
-                            >
+                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8">
                                 <div
-                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]"
-                                >
-                                    <img
-                                        src="/public/assets/icon/step-order-2.png"
-                                        alt=""
-                                        class="h-[80px] w-[80px] object-contain"
-                                    />
+                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]">
+                                    <img src="/public/assets/icon/step-order-2.png" alt=""
+                                        class="h-[80px] w-[80px] object-contain" />
                                 </div>
-                                <h2
-                                    class="mt-12 text-xl font-semibold tracking-tight max-md:mt-10"
-                                >
+                                <h2 class="mt-12 text-xl font-semibold tracking-tight max-md:mt-10 text-center">
                                     Reservasi Pemesanan
                                 </h2>
-                                <p
-                                    class="self-stretch mt-7 text-sm tracking-tight leading-6"
-                                >
-                                    Lakukan reservasi dengan mengisi Form
-                                    Pemesanan di website atau melalui chat
+                                <p class="self-stretch mt-7 text-sm tracking-tight leading-6 text-center">
+                                    Lakukan reservasi dengan mengisi Form Pemesanan di website atau melalui chat
                                     WhatsApp (WA).
                                 </p>
                             </div>
                         </article>
-                        <article
-                            class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full"
-                        >
+
+                        <article class="flex flex-col w-3/12 max-md:w-full">
                             <div
-                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8"
-                            >
+                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8">
                                 <div
-                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]"
-                                >
-                                    <img
-                                        src="/public/assets/icon/step-order-3.png"
-                                        alt=""
-                                        class="h-[80px] w-[80px] object-contain"
-                                    />
+                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]">
+                                    <img src="/public/assets/icon/step-order-3.png" alt=""
+                                        class="h-[80px] w-[80px] object-contain" />
                                 </div>
-                                <h2
-                                    class="mt-12 text-xl font-semibold tracking-tight max-md:mt-10"
-                                >
+                                <h2 class="mt-12 text-xl font-semibold tracking-tight max-md:mt-10 text-center">
                                     Konfirmasi Pemesanan
                                 </h2>
-                                <p
-                                    class="self-stretch mt-7 text-sm tracking-tight leading-6"
-                                >
-                                    konfirmasi melalui WhatsApp untuk memastikan
-                                    pesanan akan disiapkan.
+                                <p class="self-stretch mt-7 text-sm tracking-tight leading-6 text-center">
+                                    Konfirmasi melalui WhatsApp untuk memastikan pesanan akan disiapkan.
                                 </p>
                             </div>
                         </article>
-                        <article
-                            class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full"
-                        >
+
+                        <article class="flex flex-col w-3/12 max-md:w-full">
                             <div
-                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8"
-                            >
+                                class="flex overflow-hidden flex-col grow items-center px-8 pt-16 pb-11 w-full text-white bg-red-400 rounded-xl max-md:px-5 max-md:mt-8">
                                 <div
-                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]"
-                                >
-                                    <img
-                                        src="/public/assets/icon/step-order-4.png"
-                                        alt=""
-                                        class="h-[80px] w-[80px] object-contain"
-                                    />
+                                    class="flex items-center justify-center bg-red-300 h-[106px] w-[106px] rounded-[30px]">
+                                    <img src="/public/assets/icon/step-order-4.png" alt=""
+                                        class="h-[80px] w-[80px] object-contain" />
                                 </div>
-                                <h2
-                                    class="mt-12 text-xl font-semibold tracking-tight max-md:mt-10"
-                                >
+                                <h2 class="mt-12 text-xl font-semibold tracking-tight max-md:mt-10 text-center">
                                     Melakukan Pembayaran
                                 </h2>
-                                <p
-                                    class="self-stretch mt-7 text-sm tracking-tight leading-6"
-                                >
-                                    Melakukan pembayaran sesuai dengan harga
-                                    Bucket agar pesanan dapat segera diproses.
+                                <p class="self-stretch mt-7 text-sm tracking-tight leading-6 text-center">
+                                    Melakukan pembayaran sesuai dengan harga Bucket agar pesanan dapat segera diproses.
                                 </p>
                             </div>
                         </article>
@@ -218,187 +155,132 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
             </div>
         </section>
 
+
         <section class="">
-            <div
-                class="flex flex-col items-center px-1 w-full bg-orange-100 max-md:max-w-full"
-            >
+            <div class="flex flex-col items-center px-1 w-full bg-orange-100 max-md:max-w-full">
                 <div class="w-full">
                     <nav
-                        class="flex gap-6 px-px py-3 mt-20 text-xl font-bold leading-none text-white uppercase bg-red-400 max-md:mt-10"
-                    >
+                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 items-center justify-center">
+                        <!-- Elemen pertama -->
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
                         <div class="grow shrink w-56 text-rose-100">
-                            little fairy florist
+                            Little Fairy Florist
                         </div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-[228px]">
-                            little fairy florist
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
+
+                        <!-- Elemen kedua -->
+                        <div class="grow shrink w-56 hidden md:block">
+                            Little Fairy Florist
                         </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden md:block"></div>
+
+                        <!-- Elemen ketiga -->
+                        <div class="grow shrink w-56 hidden lg:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden lg:block"></div>
+
+                        <!-- Elemen keempat -->
+                        <div class="grow shrink w-56 hidden xl:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden xl:block"></div>
                     </nav>
+
                 </div>
 
-                <section
-                    class="flex flex-col w-full px-20 pt-16 pb-20 bg-red-200 max-md:px-5 max-md:pt-24"
-                >
-                    <h1
-                        class="text-5xl font-bold tracking-tighter text-center text-red-400 max-md:text-4xl"
-                    >
+                <section class="flex flex-col w-full items-center px-20 pt-16 pb-20 bg-red-200 max-md:px-5 max-md:pt-24">
+                    <h1 class="text-5xl font-bold tracking-tighter text-center text-red-400 max-md:text-4xl">
                         Etalase Produk
                     </h1>
 
-                    <p
-                        class="mt-4 text-lg font-semibold leading-7 text-center text-red-400 max-md:max-w-full"
-                    >
+                    <p class="mt-4 text-lg font-semibold leading-7 text-center text-red-400 max-md:max-w-full">
                         Temukan rangkaian bunga istimewa kami yang dirancang
                         dengan penuh cinta dan perhatian. Setiap buket
                         menghadirkan sentuhan keindahan yang akan membuat momen
                         Anda semakin berkesan. Pilih dari berbagai koleksi bunga
                         terbaik kami untuk setiap kesempatan spesial.
                     </p>
-                    <img
-                        src="/public/assets/images/pemisah.png"
-                        alt="Showcase of flower arrangements"
-                        class="object-contain mt-16 w-full max-md:mt-10 max-md:max-w-full"
-                    />
+                    <img src="/public/assets/images/pemisah.png" alt="Showcase of flower arrangements"
+                        class="object-contain mt-16 w-full max-md:mt-10 max-md:max-w-full" />
                     <div class="mt-12 max-md:mt-10 max-md:max-w-full">
-                        <div class="flex gap-5 max-md:flex-col">
-                            <div
-                                class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full"
-                            >
+                        <div class="flex gap-5 max-md:flex-col max-md:gap-8">
+                            <div class="flex flex-col w-3/12 max-md:w-full max-md:mb-8">
                                 <div class="flex flex-col grow max-md:mt-8">
                                     <div
-                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:px-5"
-                                    >
+                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:px-5">
                                         <div
-                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white"
-                                        >
+                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white">
                                             <h2>Blooming Romance</h2>
-                                            <img
-                                                src="/public/assets/images/heart.png"
-                                                alt=""
-                                                class="object-contain shrink-0 w-6 aspect-square"
-                                            />
+                                            <img src="/public/assets/images/heart.png" alt=""
+                                                class="object-contain shrink-0 w-6 aspect-square" />
                                         </div>
-                                        <img
-                                            src="/public/assets/images/buket1.png"
+                                        <img src="/public/assets/images/buket1.png"
                                             alt="Blooming Romance flower arrangement"
-                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1"
-                                        />
+                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1" />
                                         <button
-                                            class="gap-2 self-end px-5 mt-5 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
-                                        >
+                                            class="gap-2 self-end px-5 mt-5 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]">
                                             Pesan Sekarang
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full"
-                            >
+                            <div class="flex flex-col w-3/12 max-md:w-full max-md:mb-8">
                                 <div class="flex flex-col grow max-md:mt-8">
                                     <div
-                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:px-5"
-                                    >
+                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:px-5">
                                         <div
-                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white"
-                                        >
+                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white">
                                             <h2>Sweet Serenity</h2>
-                                            <img
-                                                loading="lazy"
-                                                src="/public/assets/images/heart.png"
-                                                alt=""
-                                                class="object-contain shrink-0 w-6 aspect-square"
-                                            />
+                                            <img loading="lazy" src="/public/assets/images/heart.png" alt=""
+                                                class="object-contain shrink-0 w-6 aspect-square" />
                                         </div>
-                                        <div
-                                            class="flex flex-col pb-2.5 mt-9 rounded-3xl max-md:mx-1"
-                                        >
-                                            <img
-                                                loading="lazy"
-                                                src="/public/assets/images/buket2.png"
-                                                class="object-contain z-10 -mt-2.3 w-full rounded-3xl aspect-[1.13]"
-                                            />
+                                        <div class="flex flex-col pb-2.5 mt-9 rounded-3xl max-md:mx-1">
+                                            <img loading="lazy" src="/public/assets/images/buket2.png"
+                                                class="object-contain z-10 -mt-2.3 w-full rounded-3xl aspect-[1.13]" />
                                         </div>
                                         <button
-                                            class="gap-2 self-end px-5 mt-4 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
-                                        >
+                                            class="gap-2 self-end px-5 mt-4 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]">
                                             Pesan Sekarang
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full"
-                            >
+                            <div class="flex flex-col w-3/12 max-md:w-full max-md:mb-8">
                                 <div class="flex flex-col grow max-md:mt-8">
                                     <div
-                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:pl-5"
-                                    >
+                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:pl-5">
                                         <div
-                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white max-md:mr-1"
-                                        >
+                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white max-md:mr-1">
                                             <h2>Joyful Blossoms</h2>
-                                            <img
-                                                loading="lazy"
-                                                src="/public/assets/images/heart.png"
-                                                alt=""
-                                                class="object-contain shrink-0 w-6 aspect-square"
-                                            />
+                                            <img loading="lazy" src="/public/assets/images/heart.png" alt=""
+                                                class="object-contain shrink-0 w-6 aspect-square" />
                                         </div>
-                                        <img
-                                            loading="lazy"
-                                            src="/public/assets/images/buket3.png"
+                                        <img loading="lazy" src="/public/assets/images/buket3.png"
                                             alt="Joyful Blossoms flower arrangement"
-                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1"
-                                        />
+                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1" />
                                         <button
-                                            class="gap-2 self-end px-5 mt-7 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
-                                        >
+                                            class="gap-2 self-end px-5 mt-7 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]">
                                             Pesan Sekarang
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="flex flex-col w-3/12 max-md:ml-0 max-md:`w-full`"
-                            >
+                            <div class="flex flex-col w-3/12 max-md:w-full max-md:mb-8">
                                 <div class="flex flex-col grow max-md:mt-8">
                                     <div
-                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:pl-5"
-                                    >
+                                        class="flex overflow-hidden flex-col p-6 w-full bg-red-400 rounded-xl max-w-[304px] max-md:pl-5">
                                         <div
-                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white max-md:mr-1.5"
-                                        >
+                                            class="flex gap-5 justify-between text-xl font-bold tracking-tight text-white max-md:mr-1.5">
                                             <h2>Classic Elegance</h2>
-                                            <img
-                                                loading="lazy"
-                                                src="/public/assets/images/heart.png"
-                                                alt=""
-                                                class="object-contain shrink-0 w-6 aspect-square"
-                                            />
+                                            <img loading="lazy" src="/public/assets/images/heart.png" alt=""
+                                                class="object-contain shrink-0 w-6 aspect-square" />
                                         </div>
-                                        <img
-                                            loading="lazy"
-                                            src="/public/assets/images/buket4.png"
+                                        <img loading="lazy" src="/public/assets/images/buket4.png"
                                             alt="Classic Elegance flower arrangement"
-                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1"
-                                        />
+                                            class="object-contain mt-8 w-full rounded-3xl aspect-[1.13] max-md:mx-1" />
                                         <button
-                                            class="gap-2 self-end px-5 mt-8 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]"
-                                        >
+                                            class="gap-2 self-end px-5 mt-8 text-base font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded min-h-[44px] w-[150px]">
                                             Pesan Sekarang
                                         </button>
                                     </div>
@@ -408,49 +290,47 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                     </div>
                 </section>
 
+
                 <div class="w-full">
                     <nav
-                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 max-md:mt-10 items-center justify-center"
-                    >
+                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 items-center justify-center">
+                        <!-- Elemen pertama -->
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
                         <div class="grow shrink w-56 text-rose-100">
-                            little fairy florist
+                            Little Fairy Florist
                         </div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-[228px]">
-                            little fairy florist
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
+
+                        <!-- Elemen kedua -->
+                        <div class="grow shrink w-56 hidden md:block">
+                            Little Fairy Florist
                         </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden md:block"></div>
+
+                        <!-- Elemen ketiga -->
+                        <div class="grow shrink w-56 hidden lg:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden lg:block"></div>
+
+                        <!-- Elemen keempat -->
+                        <div class="grow shrink w-56 hidden xl:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden xl:block"></div>
                     </nav>
+
                 </div>
 
                 <section class="flex flex-col rounded-none">
                     <div
-                        class="flex flex-col justify-center items-center px-20 py-24 w-full bg-orange-100 max-md:px-5 max-md:max-w-full"
-                    >
-                        <div
-                            class="flex flex-col items-center w-full max-w-[1167px] max-md:max-w-full"
-                        >
+                        class="flex flex-col justify-center items-center px-20 py-24 w-full bg-orange-100 max-md:px-5 max-md:max-w-full">
+                        <div class="flex flex-col items-center w-full max-w-[1167px] max-md:max-w-full">
                             <h2
-                                class="ml-5 text-5xl font-bold tracking-tighter text-center text-red-400 max-md:max-w-full max-md:text-4xl"
-                            >
+                                class="ml-5 text-5xl font-bold tracking-tighter text-center text-red-400 max-md:max-w-full max-md:text-4xl">
                                 Mengapa Memilih Little Fairy Florist?
                             </h2>
-                            <p
-                                class="mt-4 ml-3 text-lg leading-7 text-center text-red-400 max-md:max-w-full"
-                            >
+                            <p class="mt-4 ml-3 text-lg leading-7 text-center text-red-400 max-md:max-w-full">
                                 Kami hadir bukan hanya untuk merangkai bunga,
                                 tetapi untuk menciptakan momen yang penuh makna
                                 dan kenangan. Setiap buket dirancang dengan
@@ -458,52 +338,31 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                                 Anda semakin berkesan. Little Fairy Florist
                                 bangga menjadi bagian dari kebahagiaan Anda.
                             </p>
-                            <div
-                                class="self-stretch mt-14 max-md:mt-10 max-md:max-w-full"
-                            >
+                            <div class="self-stretch mt-14 max-md:mt-10 max-md:max-w-full">
                                 <div class="flex gap-5 max-md:flex-col">
-                                    <div
-                                        class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full"
-                                    >
+                                    <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                                         <div
-                                            class="flex flex-col grow justify-center px-6 py-7 w-full bg-red-200 rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full"
-                                        >
-                                            <img
-                                                loading="lazy"
-                                                src="/public/assets/images/owner.png"
+                                            class="flex flex-col grow justify-center px-6 py-7 w-full bg-red-200 rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full">
+                                            <img loading="lazy" src="/public/assets/images/owner.png"
                                                 alt="Little Fairy Florist showcase"
-                                                class="object-contain w-full rounded-3xl aspect-[0.95] max-md:max-w-full"
-                                            />
+                                                class="object-contain w-full rounded-3xl aspect-[0.95] max-md:max-w-full" />
                                         </div>
                                     </div>
-                                    <div
-                                        class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full"
-                                    >
+                                    <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                                         <div
-                                            class="flex flex-col self-stretch my-auto w-full text-red-400 max-md:mt-10 max-md:max-w-full"
-                                        >
+                                            class="flex flex-col self-stretch my-auto w-full text-red-400 max-md:mt-10 max-md:max-w-full">
                                             <div class="flex gap-6 self-start">
                                                 <div
-                                                    class="flex items-center justify-center bg-pink-100 h-[70px] w-[70px] rounded-[30px]"
-                                                >
-                                                    <img
-                                                        src="/public/assets/icon/reason-1.png"
-                                                        alt=""
-                                                        class="h-[30px] w-[30px] object-contain"
-                                                    />
+                                                    class="flex items-center justify-center bg-pink-100 h-[70px] w-[70px] rounded-[30px]">
+                                                    <img src="/public/assets/icon/reason-1.png" alt=""
+                                                        class="h-[30px] w-[30px] object-contain" />
                                                 </div>
-                                                <div
-                                                    class="flex flex-col grow shrink-0 basis-0 w-fit"
-                                                >
-                                                    <h3
-                                                        class="self-start text-2xl font-bold tracking-tight"
-                                                    >
+                                                <div class="flex flex-col grow shrink-0 basis-0 w-fit">
+                                                    <h3 class="self-start text-2xl font-bold tracking-tight">
                                                         Layanan Personal dari
                                                         Pemilik
                                                     </h3>
-                                                    <p
-                                                        class="text-base font-medium tracking-tight leading-7"
-                                                    >
+                                                    <p class="text-base font-medium tracking-tight leading-7">
                                                         Sebagai pemilik, saya
                                                         pribadi terlibat dalam
                                                         setiap proses untuk
@@ -512,30 +371,18 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div
-                                                class="flex flex-wrap gap-6 mt-9 max-md:mr-1"
-                                            >
+                                            <div class="flex flex-wrap gap-6 mt-9 max-md:mr-1">
                                                 <div
-                                                    class="flex items-center justify-center bg-pink-100 h-[70px] w-[70px] rounded-[30px]"
-                                                >
-                                                    <img
-                                                        src="/public/assets/icon/reason-2.png"
-                                                        alt=""
-                                                        class="h-[30px] w-[30px] object-contain"
-                                                    />
+                                                    class="flex items-center justify-center bg-pink-100 h-[70px] w-[70px] rounded-[30px]">
+                                                    <img src="/public/assets/icon/reason-2.png" alt=""
+                                                        class="h-[30px] w-[30px] object-contain" />
                                                 </div>
-                                                <div
-                                                    class="flex flex-col grow shrink-0 basis-0 w-fit"
-                                                >
-                                                    <h3
-                                                        class="self-start text-2xl font-bold tracking-tight"
-                                                    >
+                                                <div class="flex flex-col grow shrink-0 basis-0 w-fit">
+                                                    <h3 class="self-start text-2xl font-bold tracking-tight">
                                                         Kualitas dan Harga
                                                         Terbaik
                                                     </h3>
-                                                    <p
-                                                        class="text-base font-medium tracking-tight leading-7"
-                                                    >
+                                                    <p class="text-base font-medium tracking-tight leading-7">
                                                         Kami berkomitmen untuk
                                                         menghadirkan rangkaian
                                                         bunga terbaik dengan
@@ -546,29 +393,17 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div
-                                                class="flex flex-wrap gap-6 mt-8"
-                                            >
+                                            <div class="flex flex-wrap gap-6 mt-8">
                                                 <div
-                                                    class="flex items-center justify-center bg-pink-100 h-[70px] w-[70px] rounded-[30px]"
-                                                >
-                                                    <img
-                                                        src="/public/assets/icon/reason-3.png"
-                                                        alt=""
-                                                        class="h-[30px] w-[30px] object-contain"
-                                                    />
+                                                    class="flex items-center justify-center bg-pink-100 h-[70px] w-[70px] rounded-[30px]">
+                                                    <img src="/public/assets/icon/reason-3.png" alt=""
+                                                        class="h-[30px] w-[30px] object-contain" />
                                                 </div>
-                                                <div
-                                                    class="flex flex-col grow shrink-0 basis-0 w-fit"
-                                                >
-                                                    <h3
-                                                        class="self-start text-2xl font-bold tracking-tight"
-                                                    >
+                                                <div class="flex flex-col grow shrink-0 basis-0 w-fit">
+                                                    <h3 class="self-start text-2xl font-bold tracking-tight">
                                                         Selalu Ada untuk Anda
                                                     </h3>
-                                                    <p
-                                                        class="mt-4 text-base font-medium tracking-tight leading-7"
-                                                    >
+                                                    <p class="mt-4 text-base font-medium tracking-tight leading-7">
                                                         Dengan layanan yang
                                                         mudah diakses dan
                                                         jangkauan luas, kami
@@ -587,77 +422,57 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
 
                 <div class="w-full">
                     <nav
-                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 max-md:mt-10 items-center justify-center"
-                    >
+                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 items-center justify-center">
+                        <!-- Elemen pertama -->
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
                         <div class="grow shrink w-56 text-rose-100">
-                            little fairy florist
+                            Little Fairy Florist
                         </div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-[228px]">
-                            little fairy florist
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
+
+                        <!-- Elemen kedua -->
+                        <div class="grow shrink w-56 hidden md:block">
+                            Little Fairy Florist
                         </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden md:block"></div>
+
+                        <!-- Elemen ketiga -->
+                        <div class="grow shrink w-56 hidden lg:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden lg:block"></div>
+
+                        <!-- Elemen keempat -->
+                        <div class="grow shrink w-56 hidden xl:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden xl:block"></div>
                     </nav>
+
                 </div>
 
                 <section class="flex flex-col rounded-none w-full">
-                    <div
-                        class="px-14 py-16 w-full bg-red-200 max-md:px-5 max-md:max-w-full"
-                    >
+                    <div class="px-14 py-16 w-full bg-red-200 max-md:px-5 max-md:max-w-full">
                         <div class="flex gap-5 max-md:flex-col">
-                            <article
-                                class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full"
-                            >
+                            <article class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                                 <figure
-                                    class="flex overflow-hidden flex-col grow justify-end px-px w-full bg-white rounded-3xl max-md:mt-10"
-                                >
-                                    <img
-                                        loading="lazy"
-                                        src="/public/assets/images/buket5.png"
-                                        alt="Advertisement 1"
-                                        class="object-contain w-full aspect-[1.12]"
-                                    />
+                                    class="flex overflow-hidden flex-col grow justify-end px-px w-full bg-white rounded-3xl max-md:mt-10">
+                                    <img loading="lazy" src="/public/assets/images/buket5.png" alt="Advertisement 1"
+                                        class="object-contain w-full aspect-[1.12]" />
                                 </figure>
                             </article>
-                            <article
-                                class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full"
-                            >
+                            <article class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
                                 <figure
-                                    class="flex overflow-hidden flex-col grow w-full bg-white rounded-3xl max-md:mt-10"
-                                >
-                                    <img
-                                        loading="lazy"
-                                        src="/public/assets/images/buket7.png"
-                                        alt="Advertisement 2"
-                                        class="object-contain w-full aspect-[1.12]"
-                                    />
+                                    class="flex overflow-hidden flex-col grow w-full bg-white rounded-3xl max-md:mt-10">
+                                    <img loading="lazy" src="/public/assets/images/buket7.png" alt="Advertisement 2"
+                                        class="object-contain w-full aspect-[1.12]" />
                                 </figure>
                             </article>
-                            <article
-                                class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full"
-                            >
+                            <article class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
                                 <figure
-                                    class="flex overflow-hidden flex-col grow justify-center w-full bg-white rounded-3xl max-md:mt-10"
-                                >
-                                    <img
-                                        loading="lazy"
-                                        src="/public/assets/images/buket6.png"
-                                        alt="Advertisement 3"
-                                        class="object-contain w-full aspect-[1.12]"
-                                    />
+                                    class="flex overflow-hidden flex-col grow justify-center w-full bg-white rounded-3xl max-md:mt-10">
+                                    <img loading="lazy" src="/public/assets/images/buket6.png" alt="Advertisement 3"
+                                        class="object-contain w-full aspect-[1.12]" />
                                 </figure>
                             </article>
                         </div>
@@ -666,45 +481,44 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
 
                 <div class="w-full">
                     <nav
-                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 max-md:mt-10 items-center justify-center"
-                    >
+                        class="flex gap-6 px-px py-3 text-xl font-bold leading-none text-white uppercase bg-red-400 items-center justify-center">
+                        <!-- Elemen pertama -->
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
                         <div class="grow shrink w-56 text-rose-100">
-                            little fairy florist
+                            Little Fairy Florist
                         </div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-56">little fairy florist</div>
-                        <div
-                            class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"
-                        ></div>
-                        <div class="grow shrink w-[228px]">
-                            little fairy florist
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full"></div>
+
+
+                        <!-- Elemen kedua -->
+                        <div class="grow shrink w-56 hidden md:block">
+                            Little Fairy Florist
                         </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden md:block"></div>
+
+                        <!-- Elemen ketiga -->
+                        <div class="grow shrink w-56 hidden lg:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden lg:block"></div>
+
+                        <!-- Elemen keempat -->
+                        <div class="grow shrink w-56 hidden xl:block">
+                            Little Fairy Florist
+                        </div>
+                        <div class="flex shrink-0 my-auto w-5 h-5 bg-rose-100 rounded-full hidden xl:block"></div>
                     </nav>
+
                 </div>
 
                 <section class="flex flex-col rounded-none">
                     <div
-                        class="flex flex-col items-center pt-16 pb-14 w-full bg-orange-100 max-md:pt-24 max-md:max-w-full"
-                    >
-                        <h2
-                            class="text-4xl font-medium leading-none text-center text-red-400 max-md:max-w-full"
-                        >
+                        class="flex flex-col items-center pt-16 pb-14 w-full bg-orange-100 max-md:pt-24 max-md:max-w-full">
+                        <h2 class="text-4xl font-medium leading-none text-center text-red-400 max-md:max-w-full">
                             Dipercaya oleh Ratusan Pelanggan yang Bahagia
                         </h2>
 
-                        <p
-                            class="mt-8 text-lg leading-7 text-center text-red-400 max-md:max-w-full"
-                        >
+                        <p class="mt-8 text-lg leading-7 text-center text-red-400 max-md:max-w-full">
                             Kami bangga menjadi bagian dari momen spesial
                             Anda.<br />
                             Berikut adalah pengalaman pelanggan kami yang telah
@@ -712,8 +526,7 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                             bunga dari Little Fairy Florist.
                         </p>
                         <div
-                            class="flex flex-col self-stretch px-14  w-full max-md:px-5 max-md:mt-10 max-md:max-w-full"
-                        >
+                            class="flex flex-col self-stretch px-14  w-full max-md:px-5 max-md:mt-10 max-md:max-w-full hidden">
                             <TestimonialSection />
                         </div>
                     </div>

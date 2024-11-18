@@ -1,61 +1,64 @@
 <template>
-    <div class="flex min-h-screen">
-        <aside class="w-64 bg-red-300 p-6">
-            <h2 class="text-2xl font-bold mb-4">Little Fairy Florist</h2>
+    <div class="flex min-h-screen bg-gray-100">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-red-300 text-white p-6 shadow-lg rounded-r-lg">
+            <h2 class="text-3xl font-semibold mb-10 text-center tracking-wide">
+                Little Fairy Florist
+            </h2>
             <nav>
-                <ul>
-                    <li class="mb-2">
+                <ul class="space-y-4">
+                    <li>
                         <router-link
                             to="/dashboard"
-                            class="block p-2 rounded hover:bg-red-400"
+                            class="block py-3 px-4 bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Dashboard
                         </router-link>
                     </li>
-                    <li class="mb-2">
+                    <li>
                         <router-link
                             to="/orders"
-                            class="block p-2 rounded hover:bg-red-400"
+                            class="block py-3 px-4 bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Orders
                         </router-link>
                     </li>
-                    <li class="mb-2">
+                    <li>
                         <router-link
                             to="/manage-product"
-                            class="block p-2 rounded hover:bg-red-400"
+                            class="block py-3 px-4 bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Products
                         </router-link>
                     </li>
-                    <li class="mb-2">
+                    <li>
                         <router-link
                             to="/add-product"
-                            class="block p-2 rounded hover:bg-red-400"
+                            class="block py-3 px-4 bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Add Product
                         </router-link>
                     </li>
-                    <li class="mb-2">
+                    <li>
                         <router-link
                             to="/manage-testimonial"
-                            class="block p-2 rounded hover:bg-red-400"
+                            class="block py-3 px-4 bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Testimonial
                         </router-link>
                     </li>
-                    <li class="mb-2">
+                    <li>
                         <router-link
                             to="/add-testimonial"
-                            class="block p-2 rounded hover:bg-red-400"
+                            class="block py-3 px-4 bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Add Testimonial
                         </router-link>
                     </li>
-                    <li>
+                    <li class="mt-6">
                         <button
                             @click="logout"
-                            class="block w-full text-left p-2 rounded hover:bg-red-400"
+                            class="block w-full py-3 px-4 text-left bg-red-400 rounded-md hover:bg-red-500 hover:text-gray-100 transition duration-200 ease-in-out"
                         >
                             Logout
                         </button>
@@ -64,7 +67,8 @@
             </nav>
         </aside>
 
-        <main class="flex-1 bg-gray-100">
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
             <slot></slot>
         </main>
     </div>
@@ -93,16 +97,19 @@ export default {
                     throw new Error("Logout failed");
                 }
 
-                // Hapus token dari localStorage
                 localStorage.removeItem("authToken");
-
-                // Redirect ke halaman login
                 this.$router.push("/login");
             } catch (error) {
                 console.error("Logout error:", error);
-                // Handle error sesuai kebutuhan
             }
         },
     },
 };
 </script>
+
+<style scoped>
+a,
+button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+</style>

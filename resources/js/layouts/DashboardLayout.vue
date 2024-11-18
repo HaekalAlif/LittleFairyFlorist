@@ -2,7 +2,7 @@
 <template>
     <div class="flex">
         <SidebarContent />
-        <main class="flex-1 p-6 bg-gray-100">
+        <main class="flex-1 -ml-[65px] bg-gray-100">
             <slot></slot>
             <!-- Pastikan slot ini ada untuk menampilkan konten -->
         </main>

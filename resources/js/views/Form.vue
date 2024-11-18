@@ -1,118 +1,110 @@
-<script setup lang>
+<script setup>
 import MainLayout from "@/layouts/MainLayout.vue";
 </script>
 
 <template>
     <MainLayout>
-        <div
-            class="bg-red-200 flex justify-center items-center min-h-screen py-8"
-        >
-            <div
-                class="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md"
-            >
-                <h1 class="text-2xl font-bold mb-6 text-center">
-                    Form Pemesanan
-                </h1>
+        <div class="bg-red-200 flex justify-center items-center min-h-screen py-8 px-4">
+            <div class="bg-white p-10 mt-20 rounded-lg shadow-lg w-full max-w-4xl">
+                <h1 class="text-3xl font-bold mb-8 text-center text-red-500">Form Pemesanan Bunga</h1>
                 <form @submit.prevent="submitForm">
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Nama Pembeli</label>
-                        <input
-                            type="text"
-                            v-model="namaPembeli"
-                            class="w-full px-3 py-2 border rounded-lg"
-                            placeholder="Type here"
-                            required
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700"
-                            >Nomor Whatsapp</label
-                        >
-                        <input
-                            type="text"
-                            v-model="nomorWhatsapp"
-                            class="w-full px-3 py-2 border rounded-lg"
-                            placeholder="Type here"
-                            required
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Alamat</label>
-                        <input
-                            type="text"
-                            v-model="alamat"
-                            class="w-full px-3 py-2 border rounded-lg"
-                            placeholder="Type here"
-                            required
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700"
-                            >Gambar Referensi</label
-                        >
-                        <input
-                            type="file"
-                            @change="handleFileUpload"
-                            class="w-full px-3 py-2 border rounded-lg"
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Jumlah Buket</label>
-                        <input
-                            type="number"
-                            v-model="jumlahBuket"
-                            class="w-full px-3 py-2 border rounded-lg"
-                            placeholder="Type here"
-                            required
-                        />
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700"
-                            >Catatan Tambahan</label
-                        >
-                        <textarea
-                            v-model="catatanTambahan"
-                            class="w-full px-3 py-2 border rounded-lg"
-                            placeholder="Type here"
-                        ></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Pengiriman</label>
-                        <div class="flex items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Nama Pembeli</label>
                             <input
-                                type="radio"
-                                v-model="pengiriman"
-                                value="Delivery"
-                                class="mr-2"
+                                type="text"
+                                v-model="namaPembeli"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                                placeholder="Masukkan Nama Anda"
                                 required
                             />
-                            Delivery
-                            <input
-                                type="radio"
-                                v-model="pengiriman"
-                                value="Pickup"
-                                class="ml-4 mr-2"
-                                required
-                            />
-                            Pickup
                         </div>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700"
-                            >Tanggal Pickup/Pengiriman</label
-                        >
-                        <input
-                            type="date"
-                            v-model="tanggalPengiriman"
-                            class="w-full px-3 py-2 border rounded-lg"
-                            required
-                        />
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Nomor WhatsApp</label>
+                            <input
+                                type="text"
+                                v-model="nomorWhatsapp"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                                placeholder="Masukkan Nomor WhatsApp"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Alamat</label>
+                            <input
+                                type="text"
+                                v-model="alamat"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                                placeholder="Masukkan Alamat Pengiriman"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Gambar Referensi</label>
+                            <input
+                                type="file"
+                                @change="handleFileUpload"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Jumlah Buket</label>
+                            <input
+                                type="number"
+                                v-model="jumlahBuket"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                                placeholder="Masukkan Jumlah Buket"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Catatan Tambahan</label>
+                            <textarea
+                                v-model="catatanTambahan"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                                placeholder="Tambahkan Catatan jika ada"
+                            ></textarea>
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-gray-700 font-medium mb-2">Pengiriman</label>
+                            <div class="flex items-center space-x-4">
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                        type="radio"
+                                        v-model="pengiriman"
+                                        value="Delivery"
+                                        class="focus:ring-red-400"
+                                        required
+                                    />
+                                    <span>Delivery</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                        type="radio"
+                                        v-model="pengiriman"
+                                        value="Pickup"
+                                        class="focus:ring-red-400"
+                                        required
+                                    />
+                                    <span>Pickup</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-gray-700 font-medium mb-2">Tanggal Pickup/Pengiriman</label>
+                            <input
+                                type="date"
+                                v-model="tanggalPengiriman"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-400 transition"
+                                required
+                            />
+                        </div>
                     </div>
                     <button
                         type="submit"
-                        class="w-full bg-red-300 text-white py-2 rounded-lg"
+                        class="w-full mt-8 bg-red-400 text-white py-3 rounded-md font-semibold shadow-lg hover:bg-red-500 transition duration-300"
                     >
-                        Submit
+                        Pesan Sekarang
                     </button>
                 </form>
             </div>
@@ -161,21 +153,18 @@ export default {
                 .then((response) => response.json())
                 .then((data) => {
                     if (data.success) {
-                        alert("Pesanan berhasil disimpan!"); // Pop-up sukses
-
-                        // Tunda pengalihan ke WhatsApp selama 2 detik
+                        alert("Pesanan berhasil disimpan!");
                         setTimeout(() => {
-                            window.open(data.whatsapp_url, "_blank"); // Buka WhatsApp dengan URL
-                        }, 2000); // Waktu tunggu 2000 ms (2 detik)
-
-                        this.resetForm(); // Reset form setelah sukses
+                            window.open(data.whatsapp_url, "_blank");
+                        }, 2000);
+                        this.resetForm();
                     } else {
-                        alert("Gagal menyimpan pesanan."); // Pop-up gagal
+                        alert("Gagal menyimpan pesanan.");
                     }
                 })
                 .catch((error) => {
                     console.error("Error:", error);
-                    alert("Terjadi kesalahan."); // Pop-up error
+                    alert("Terjadi kesalahan.");
                 });
         },
         resetForm() {
@@ -191,7 +180,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-/* Add any custom styles here */
-</style>
