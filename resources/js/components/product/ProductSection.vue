@@ -32,7 +32,7 @@ async function fetchProducts() {
 // Fetch products when the component is mounted
 onMounted(() => {
     fetchProducts();
-});
+}); 
 </script>
 
 <template>
@@ -84,7 +84,7 @@ onMounted(() => {
             </div>
 
             <div class="mt-14 max-md:mt-10 max-md:max-w-full">
-                <div class="flex gap-5 flex-wrap">
+                <div class="flex gap-x-5 flex-wrap">
                     <!-- Render ProductCard components for each product -->
                     <ProductCard
                         v-for="(product, index) in products"

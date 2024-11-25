@@ -7,8 +7,8 @@ export default {
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
-        "./resources/js/**/*.vue", // Tambahkan ini untuk Vue
-        "./resources/js/**/*.jsx", // Jika menggunakan JSX
+        "./resources/js/**/*.vue", 
+        "./resources/js/**/*.jsx", 
     ],
 
     theme: {

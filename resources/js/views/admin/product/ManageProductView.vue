@@ -5,7 +5,7 @@ import { ref, onMounted } from "vue";
 const products = ref([]);
 const errorMessage = ref(null);
 const successMessage = ref(null);
-const csrfToken = localStorage.getItem("authToken"); // Ambil CSRF token dari localStorage
+const csrfToken = localStorage.getItem("authToken"); 
 
 async function fetchProducts() {
     try {

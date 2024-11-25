@@ -41,7 +41,7 @@ onMounted(() => {
 
     // Initialize Slick.js
     setTimeout(() => {
-        $(".carousel").slick({
+        $("#tes").slick({
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -72,8 +72,8 @@ onMounted(() => {
         </div>
 
         <!-- Slick Carousel -->
-        <div class="carousel">
-            <TestimonialCard
+        <div id="tes" class="carousel">
+            <TestimonialCard 
                 v-for="(testimonial, index) in testimonials"
                 :key="index"
                 :customerName="testimonial.customer_name"

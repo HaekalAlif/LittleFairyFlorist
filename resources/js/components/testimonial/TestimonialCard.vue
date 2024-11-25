@@ -29,6 +29,6 @@ defineProps({
 }
 
 .testimonial-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(10px);
 }
 </style>

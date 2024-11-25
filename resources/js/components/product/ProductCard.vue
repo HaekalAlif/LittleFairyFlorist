@@ -28,7 +28,7 @@ export default {
 
 <template>
     <article
-        class="product-card relative w-[calc(25%-15px)] max-md:w-full bg-red-400 rounded-xl p-6 text-orange-100 mb-12"
+        class="product-card relative w-[calc(25%-15px)] max-md:w-full bg-red-400 rounded-xl p-6 text-orange-100 mb-12 transition-transform duration-300 transform hover:scale-105 hover:shadow-lg"
     >
         <header class="flex justify-between items-center mb-8">
             <h3 class="text-xl tracking-tight text-white">{{ name }}</h3>
@@ -57,7 +57,7 @@ export default {
         </p>
         <a href="/order">
             <button
-                class="absolute bottom-6 right-6 px-5 font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded h-11 w-[150px]"
+                class="absolute bottom-6 right-6 px-5 font-semibold tracking-tight text-center text-red-400 bg-orange-100 rounded h-11 w-[150px] transition-transform duration-300 transform hover:scale-110"
             >
                 Pesan Sekarang
             </button>

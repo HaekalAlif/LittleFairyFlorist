@@ -526,7 +526,7 @@ import TestimonialSection from "../components/testimonial/TestimonialSection.vue
                             bunga dari Little Fairy Florist.
                         </p>
                         <div
-                            class="flex flex-col self-stretch px-14  w-full max-md:px-5 max-md:mt-10 max-md:max-w-full hidden">
+                            class="flex flex-col self-stretch px-14  w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
                             <TestimonialSection />
                         </div>
                     </div>
