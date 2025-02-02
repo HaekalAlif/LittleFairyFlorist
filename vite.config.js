@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
+import path from "path";
 
 export default defineConfig({
     plugins: [
@@ -10,4 +11,22 @@ export default defineConfig({
         }),
         vue(),
     ],
+    build: {
+        // Specify build output directory
+        outDir: "public/build",
+        // Ensure proper permissions
+        chunkSizeWarningLimit: 1600,
+        rollupOptions: {
+            output: {
+                manualChunks: undefined,
+            },
+        },
+    },
+    // Add base URL configuration
+    base: process.env.APP_URL ? process.env.APP_URL : "/",
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./resources/js"),
+        },
+    },
 });
