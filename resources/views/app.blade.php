@@ -18,10 +18,8 @@
         <div id="homeview"></div>
         
         <script>
-        // Ambil token CSRF dari meta tag
-        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-        console.log("CSRF Token: ", csrfToken); // Tampilkan di console
-    </script>
+        
+        </script>
     
     </body>
 </html>

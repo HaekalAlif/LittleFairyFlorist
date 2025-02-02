@@ -1,17 +1,18 @@
 <script setup>
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
+import Swal from "sweetalert2";
 </script>
 
 <template>
     <DashboardLayout>
         <div
-            class="bg-red-200 flex justify-center items-center min-h-screen py-8"
+            class="bg-red-200 flex justify-center items-center min-h-screen py-6"
         >
             <div
-                class="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md"
+                class="bg-white p-8 mt-15 rounded-lg shadow-lg w-full max-w-md"
             >
-                <h1 class="text-2xl font-bold mb-6 text-center">
-                    Form Penambahan Produk
+                <h1 class="text-3xl font-bold text-red-500 mb-6 text-center">
+                    Add Product
                 </h1>
                 <form @submit.prevent="submitForm">
                     <div class="mb-4">
@@ -28,7 +29,7 @@ import DashboardLayout from "@/layouts/DashboardLayout.vue";
                         <label class="block text-gray-700">Deskripsi</label>
                         <textarea
                             v-model="product.description"
-                            class="w-full px-3 py-2 border rounded-lg"
+                            class="w-full px-3 py-2kamka border rounded-lg"
                             placeholder="Type here"
                             required
                         ></textarea>
@@ -107,19 +108,37 @@ export default {
                 })
                 .then((data) => {
                     if (data.message) {
-                        alert("Produk berhasil ditambahkan!");
-                        this.resetForm();
-                        this.$router.push("/manage-product"); // Redirect to manage product page
+                        // SweetAlert untuk notifikasi sukses
+                        Swal.fire({
+                            title: "Berhasil!",
+                            text: "Produk berhasil ditambahkan!",
+                            icon: "success",
+                            confirmButtonText: "OK",
+                            timer: 2000, // SweetAlert akan otomatis ditutup setelah 2 detik
+                            timerProgressBar: true,
+                        }).then(() => {
+                            this.resetForm();
+                            this.$router.push("/manage-product");
+                        });
                     } else {
-                        alert(
-                            "Gagal menambahkan produk: " +
-                                JSON.stringify(data.errors)
-                        );
+                        Swal.fire({
+                            title: "Gagal!",
+                            text:
+                                "Gagal menambahkan produk: " +
+                                JSON.stringify(data.errors),
+                            icon: "error",
+                            confirmButtonText: "OK",
+                        });
                     }
                 })
                 .catch((error) => {
                     console.error("Error:", error);
-                    alert("Terjadi kesalahan saat menambahkan produk.");
+                    Swal.fire({
+                        title: "Error!",
+                        text: "Terjadi kesalahan saat menambahkan produk.",
+                        icon: "error",
+                        confirmButtonText: "OK",
+                    });
                 });
         },
         resetForm() {

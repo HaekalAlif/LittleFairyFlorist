@@ -1,14 +1,14 @@
 <script setup>
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import { ref } from "vue";
+import Swal from "sweetalert2";
 </script>
 
 <template>
     <DashboardLayout>
-        <div class="container mx-auto p-6">
-            <h1 class="text-2xl font-bold mb-4">Orders</h1>
+        <div class="container mx-auto p-6 bg-red-200">
+            <h1 class="text-3xl font-bold text-red-500 mb-6">Orders</h1>
 
-            <!-- Success Message -->
             <div
                 v-if="successMessage"
                 class="bg-green-100 text-green-800 p-4 rounded mb-4"
@@ -16,7 +16,6 @@ import { ref } from "vue";
                 {{ successMessage }}
             </div>
 
-            <!-- Error Message -->
             <div
                 v-if="errorMessage"
                 class="bg-red-100 text-red-800 p-4 rounded mb-4"
@@ -74,7 +73,9 @@ import { ref } from "vue";
                                     class="max-w-[200px] h-auto"
                                 />
                             </td>
-                            <td class="px-4 py-20 flex items-center justify-center">
+                            <td
+                                class="px-4 py-20 flex items-center justify-center"
+                            >
                                 <button
                                     @click="confirmDelete(order.id)"
                                     class="bg-red-500 hover:bg-red-900 text-white px-3 py-1 rounded transition"
@@ -107,17 +108,14 @@ export default {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
-                        "X-CSRF-TOKEN": document.querySelector(
-                            'meta[name="csrf-token"]'
-                        ).content,
                         Accept: "application/json",
                     },
-                    credentials: "include",
                 });
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
+
                 const data = await response.json();
                 this.orders = data;
                 this.errorMessage = null;
@@ -128,68 +126,97 @@ export default {
             }
         },
 
-        // Confirm delete order
         confirmDelete(orderId) {
-            if (confirm("Apakah Anda yakin ingin menghapus pesanan ini?")) {
-                this.deleteOrder(orderId);
-            }
+            Swal.fire({
+                title: "Apakah Anda yakin?",
+                text: "Pesanan ini akan dihapus secara permanen.",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Ya, hapus!",
+                cancelButtonText: "Batal",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.deleteOrder(orderId);
+                }
+            });
         },
 
-        // Delete order
         async deleteOrder(orderId) {
             try {
+                // Ambil token otentikasi dari localStorage
                 const token = localStorage.getItem("authToken");
+                if (!token) {
+                    throw new Error("Token otentikasi tidak ditemukan");
+                }
+
+                // Ambil CSRF token dari meta tag
+                const csrfToken = document
+                    .querySelector('meta[name="csrf-token"]')
+                    .getAttribute("content");
+                if (!csrfToken) {
+                    throw new Error("CSRF token tidak ditemukan");
+                }
+
+                // Kirim permintaan DELETE ke backend
                 const response = await fetch(
                     `http://127.0.0.1:8000/orders/${orderId}`,
                     {
                         method: "DELETE",
                         headers: {
                             Authorization: `Bearer ${token}`,
-                            "X-CSRF-TOKEN": document.querySelector(
-                                'meta[name="csrf-token"]'
-                            ).content,
+                            "X-CSRF-TOKEN": csrfToken, // Tambahkan CSRF token
                             Accept: "application/json",
-                            "Content-Type": "application/json",
                         },
-                        credentials: "include",
                     }
                 );
 
+                // Periksa apakah respons berhasil
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    const errorData = await response.json();
+                    throw new Error(
+                        errorData.message ||
+                            `HTTP error! status: ${response.status}`
+                    );
                 }
 
-                const result = await response.json();
+                // Hapus pesanan dari array lokal
                 this.orders = this.orders.filter(
                     (order) => order.id !== orderId
                 );
-                this.successMessage = "Pesanan berhasil dihapus";
-                setTimeout(() => (this.successMessage = null), 3000);
+
+                // Tampilkan pesan sukses
+                Swal.fire("Dihapus!", "Pesanan berhasil dihapus.", "success");
             } catch (error) {
                 console.error("Error deleting order:", error);
-                this.errorMessage =
-                    "Gagal menghapus pesanan. Silakan coba lagi.";
-                setTimeout(() => (this.errorMessage = null), 3000);
+                Swal.fire(
+                    "Error!",
+                    error.message ||
+                        "Gagal menghapus pesanan. Silakan coba lagi.",
+                    "error"
+                );
             }
         },
 
-        // Update order status
         async updateOrderStatus(order) {
             try {
-                const token = localStorage.getItem("authToken");
+                const token = document
+                    .querySelector('meta[name="csrf-token"]')
+                    .getAttribute("content");
+
                 const response = await fetch(
                     `http://127.0.0.1:8000/orders/${order.id}`,
                     {
                         method: "PUT",
                         headers: {
-                            Authorization: `Bearer ${token}`,
-                            "X-CSRF-TOKEN": document.querySelector(
-                                'meta[name="csrf-token"]'
-                            ).content,
+                            Authorization: `Bearer ${localStorage.getItem(
+                                "authToken"
+                            )}`,
                             "Content-Type": "application/json",
                             Accept: "application/json",
+                            "X-CSRF-TOKEN": token, // Tambahkan header CSRF
                         },
-                        credentials: "include",
                         body: JSON.stringify({ status: order.status }),
                     }
                 );
@@ -198,8 +225,14 @@ export default {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
-                const result = await response.json();
                 this.successMessage = "Status pesanan berhasil diperbarui";
+                Swal.fire({
+                    title: "Berhasil!",
+                    text: "Status pesanan telah berhasil diperbarui.",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                });
+
                 setTimeout(() => (this.successMessage = null), 3000);
             } catch (error) {
                 console.error("Error updating order status:", error);

@@ -2,6 +2,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import Swal from "sweetalert2"; // Import SweetAlert2
 
 const testimonials = ref([]);
 const errorMessage = ref(null);
@@ -27,9 +28,21 @@ async function fetchTestimonials() {
 }
 
 function confirmDelete(testimonialId) {
-    if (confirm("Apakah Anda yakin ingin menghapus testimonial ini?")) {
-        deleteTestimonial(testimonialId);
-    }
+    // Ganti confirm dengan SweetAlert2
+    Swal.fire({
+        title: "Apakah Anda yakin?",
+        text: "Anda tidak bisa mengembalikan testimonial ini setelah dihapus.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Ya, hapus!",
+        cancelButtonText: "Batal",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            deleteTestimonial(testimonialId);
+        }
+    });
 }
 
 async function deleteTestimonial(testimonialId) {
@@ -56,8 +69,14 @@ async function deleteTestimonial(testimonialId) {
         testimonials.value = testimonials.value.filter(
             (testimonial) => testimonial.id !== testimonialId
         );
-        successMessage.value = "Testimonial berhasil dihapus";
-        setTimeout(() => (successMessage.value = null), 3000);
+
+        // SweetAlert sukses setelah berhasil menghapus testimonial
+        Swal.fire({
+            title: "Berhasil!",
+            text: "Testimonial telah dihapus.",
+            icon: "success",
+            confirmButtonColor: "#3085d6",
+        });
     } catch (error) {
         console.error("Error deleting testimonial:", error);
         errorMessage.value = "Gagal menghapus testimonial. Silakan coba lagi.";
@@ -72,8 +91,10 @@ onMounted(() => {
 
 <template>
     <DashboardLayout>
-        <div class="container mx-auto p-6">
-            <h1 class="text-2xl font-bold mb-4">Manage Testimonials</h1>
+        <div class="container mx-auto p-6 bg-red-200">
+            <h1 class="text-3xl font-bold text-red-500 mb-6">
+                Manage Testimonials
+            </h1>
 
             <div
                 v-if="successMessage"

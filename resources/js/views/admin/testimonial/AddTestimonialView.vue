@@ -2,6 +2,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import Swal from "sweetalert2"; // Import SweetAlert2
 
 const testimonial = ref({
     customer_name: "",
@@ -39,12 +40,26 @@ async function submitForm() {
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
-        alert("Testimonial berhasil ditambahkan!");
-        resetForm();
-        router.push("/manage-testimonial"); // Redirect to manage testimonial page
+
+        // Show SweetAlert2 when successful
+        Swal.fire({
+            title: "Berhasil!",
+            text: "Testimonial berhasil ditambahkan.",
+            icon: "success",
+            timer: 2000, // Display for 2 seconds before redirect
+            showConfirmButton: false,
+        }).then(() => {
+            resetForm();
+            router.push("/manage-testimonial"); // Redirect after SweetAlert
+        });
     } catch (error) {
         console.error("Error:", error);
-        alert("Terjadi kesalahan saat menambahkan testimonial.");
+        Swal.fire({
+            title: "Error!",
+            text: "Terjadi kesalahan saat menambahkan testimonial.",
+            icon: "error",
+            confirmButtonText: "OK",
+        });
     }
 }
 
@@ -58,13 +73,13 @@ function resetForm() {
 <template>
     <DashboardLayout>
         <div
-            class="bg-red-200 flex justify-center items-center min-h-screen py-8"
+            class="bg-red-200 flex justify-center items-center min-h-screen py-6"
         >
             <div
-                class="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md"
+                class="bg-white p-8 mt-12 rounded-lg shadow-lg w-full max-w-md"
             >
-                <h1 class="text-2xl font-bold mb-6 text-center">
-                    Form Penambahan Testimonial
+                <h1 class="text-3xl font-bold text-red-500 mb-6 text-center">
+                    Add Testimonial
                 </h1>
                 <form @submit.prevent="submitForm">
                     <div class="mb-4">
@@ -112,4 +127,3 @@ function resetForm() {
 <style scoped>
 /* Add any custom styles here */
 </style>
-s

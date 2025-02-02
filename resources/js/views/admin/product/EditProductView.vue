@@ -6,7 +6,8 @@
             <div
                 class="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md"
             >
-                <h1 class="text-2xl font-bold mb-6 text-center">Edit Produk</h1>
+                
+      <h1 class="text-3xl font-bold text-red-500 mb-6">Edit Product</h1>
 
                 <div
                     v-if="successMessage"
@@ -76,7 +77,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-
+import Swal from "sweetalert2";
 const product = ref({
     name: "",
     description: "",
@@ -153,13 +154,24 @@ async function submitForm() {
             return;
         }
 
-        successMessage.value = "Produk berhasil diperbarui!";
-        setTimeout(() => router.push("/manage-product"), 2000);
+        // SweetAlert untuk notifikasi sukses
+        await Swal.fire({
+            title: "Berhasil!",
+            text: "Produk berhasil diperbarui!",
+            icon: "success",
+            confirmButtonText: "OK",
+            timer: 2000, // SweetAlert akan otomatis ditutup setelah 2 detik
+            timerProgressBar: true,
+        });
+
+        // Redirect ke halaman manage-product setelah SweetAlert
+        router.push("/manage-product");
     } catch (error) {
         console.error("Error updating product:", error);
         errorMessage.value = "Terjadi kesalahan saat memperbarui produk.";
     }
 }
+
 
 // Fetch product data saat komponen di-mount
 onMounted(() => {

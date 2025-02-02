@@ -2,6 +2,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import Swal from "sweetalert2"; // Import SweetAlert2
 
 const testimonial = ref({
     customer_name: "",
@@ -76,15 +77,26 @@ async function submitForm() {
 
         if (!response.ok) {
             const errorData = await response.json();
-            console.error("Validation errors:", errorData.errors);
             errorMessage.value = errorData.errors
                 ? errorData.errors.customer_name || "Validasi gagal."
                 : "Terjadi kesalahan.";
             return;
         }
 
-        successMessage.value = "Testimonial berhasil diperbarui!";
-        setTimeout(() => router.push("/manage-testimonial"), 2000);
+        // Menampilkan SweetAlert setelah berhasil
+        Swal.fire({
+            title: 'Berhasil!',
+            text: 'Testimonial telah diperbarui.',
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            willClose: () => {
+                // Setelah SweetAlert ditutup, arahkan ke halaman yang diinginkan
+                router.push({
+                    path: "/manage-testimonial",
+                    query: { success: true },
+                });
+            }
+        });
     } catch (error) {
         console.error("Error:", error);
         errorMessage.value = "Terjadi kesalahan saat memperbarui testimonial.";
@@ -105,9 +117,7 @@ onMounted(() => {
             <div
                 class="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md"
             >
-                <h1 class="text-2xl font-bold mb-6 text-center">
-                    Edit Testimonial
-                </h1>
+                <h1 class="text-3xl font-bold text-red-500 mb-6">Edit Testimonial</h1>
 
                 <div
                     v-if="successMessage"

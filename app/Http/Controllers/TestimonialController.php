@@ -1,18 +1,16 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+
 class TestimonialController extends Controller
 {
     public function index()
     {
-        // Mengambil semua data testimonial dari database
         $testimonials = Testimonial::all();
-
         return response()->json($testimonials);
     }
 
@@ -33,7 +31,7 @@ class TestimonialController extends Controller
             $testimonial->image_url = $path;
         }
 
-        $testimonial->save();
+        $testimonial->save();        
 
         return response()->json(['message' => 'Testimonial created successfully.']);
     }
@@ -56,7 +54,6 @@ class TestimonialController extends Controller
         $testimonial->description = $request->description;
 
         if ($request->hasFile('image')) {
-            // Hapus gambar yang lama jika ada
             if ($testimonial->image_url) {
                 Storage::disk('public')->delete($testimonial->image_url);
             }

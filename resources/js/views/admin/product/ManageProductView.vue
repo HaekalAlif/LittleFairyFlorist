@@ -1,17 +1,17 @@
 <script setup>
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import { ref, onMounted } from "vue";
+import Swal from "sweetalert2"; // Pastikan Anda telah menginstal SweetAlert2
 
 const products = ref([]);
 const errorMessage = ref(null);
-const successMessage = ref(null);
-const csrfToken = localStorage.getItem("authToken"); 
+const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
 async function fetchProducts() {
     try {
         const response = await fetch("http://127.0.0.1:8000/products", {
             headers: {
-                Authorization: `Bearer ${csrfToken}`,
+                Authorization: `Bearer ${localStorage.getItem("authToken")}`,
                 Accept: "application/json",
             },
             credentials: "include",
@@ -21,13 +21,25 @@ async function fetchProducts() {
     } catch (error) {
         console.error("Error fetching products:", error);
         errorMessage.value = "Gagal mengambil data produk. Silakan coba lagi.";
+        setTimeout(() => (errorMessage.value = null), 3000);
     }
 }
 
 function confirmDelete(productId) {
-    if (confirm("Apakah Anda yakin ingin menghapus produk ini?")) {
-        deleteProduct(productId);
-    }
+    Swal.fire({
+        title: "Apakah Anda yakin?",
+        text: "Produk ini akan dihapus secara permanen!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Ya, hapus!",
+        cancelButtonText: "Batal",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            deleteProduct(productId);
+        }
+    });
 }
 
 async function deleteProduct(productId) {
@@ -37,10 +49,8 @@ async function deleteProduct(productId) {
             {
                 method: "DELETE",
                 headers: {
-                    Authorization: `Bearer ${csrfToken}`,
-                    "X-CSRF-TOKEN": document.querySelector(
-                        'meta[name="csrf-token"]'
-                    ).content,
+                    Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+                    "X-CSRF-TOKEN": csrfToken,
                     Accept: "application/json",
                 },
                 credentials: "include",
@@ -54,8 +64,13 @@ async function deleteProduct(productId) {
         products.value = products.value.filter(
             (product) => product.id !== productId
         );
-        successMessage.value = "Produk berhasil dihapus";
-        setTimeout(() => (successMessage.value = null), 3000);
+
+        Swal.fire({
+            title: "Berhasil!",
+            text: "Produk berhasil dihapus.",
+            icon: "success",
+            confirmButtonText: "OK",
+        });
     } catch (error) {
         console.error("Error deleting product:", error);
         errorMessage.value = "Gagal menghapus produk. Silakan coba lagi.";
@@ -70,16 +85,8 @@ onMounted(() => {
 
 <template>
     <DashboardLayout>
-        <div class="container mx-auto p-6">
-            <h1 class="text-2xl font-bold mb-4">Manage Products</h1>
-
-            <!-- Success Message -->
-            <div
-                v-if="successMessage"
-                class="bg-green-100 text-green-800 p-4 rounded mb-4"
-            >
-                {{ successMessage }}
-            </div>
+        <div class="container mx-auto p-6 bg-red-200">
+            <h1 class="text-3xl font-bold text-red-500 mb-6">Manage Product</h1>
 
             <!-- Error Message -->
             <div

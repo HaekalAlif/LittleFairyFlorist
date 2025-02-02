@@ -1,6 +1,9 @@
 <template>
     <header
-        class="flex absolute top-2 left-0 right-0 z-10 overflow-hidden flex-wrap gap-10 px-16 py-6 font-semibold bg-transparent max-md:px-5"
+        :class="[
+            'flex fixed top-0 left-0 right-0 z-50 overflow-hidden flex-wrap gap-10 px-16 py-5 font-semibold max-md:px-5 shadow-md transition-colors duration-300',
+            isScrolled ? 'bg-pink-500' : 'bg-transparent',
+        ]"
     >
         <h1 class="text-2xl tracking-tighter text-red-400">
             Little Fairy Florist
@@ -88,7 +91,7 @@
         <!-- Sidebar -->
         <aside
             :class="[
-                'fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-30 transition-transform transform',
+                'fixed top-0 right-0 w-64 h-full bg-pink-500 shadow-lg z-30 transition-transform transform max-md:bg-FFC6C6',
                 isSidebarOpen ? 'translate-x-0' : 'translate-x-full',
             ]"
         >
@@ -151,12 +154,22 @@ export default {
     data() {
         return {
             isSidebarOpen: false,
+            isScrolled: false,
         };
     },
     methods: {
         toggleSidebar() {
             this.isSidebarOpen = !this.isSidebarOpen;
         },
+        handleScroll() {
+            this.isScrolled = window.scrollY > 0;
+        },
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll);
     },
 };
 </script>
@@ -176,5 +189,23 @@ export default {
 
 .bg-black\/50 {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-pink-500 {
+    background-color: #ffc6c6;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .bg-pink-500 {
+        background-color: #ffc6c6;
+    }
 }
 </style>

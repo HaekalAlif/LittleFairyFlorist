@@ -4,6 +4,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ActivityController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -46,11 +47,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::delete('/testimonials/{id}', [TestimonialController::class, 'destroy']);
 });
 
-// Catch-all route untuk SPA harus berada di paling bawah
-Route::get('/{pathMatch}', function () {
-    return view('app');
-})->where('pathMatch', ".*");
-
 // route untuk order user
 Route::post('/orders', [OrderController::class, 'store']);
 
@@ -59,3 +55,8 @@ Route::get('/products', [ProductController::class, 'index']);
 
 // Route untuk mengambil data testimonial
 Route::get('/testimonials', [TestimonialController::class, 'index']);
+
+// Catch-all route untuk SPA harus berada di paling bawah
+Route::get('/{pathMatch}', function () {
+    return view('app');
+})->where('pathMatch', ".*");
